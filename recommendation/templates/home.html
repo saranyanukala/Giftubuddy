@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+   <body>
+     <ol>
+      		{% for index in masterset %}
+      			<li> {{ index }} </li>
+      			<li> {{ masterset[index] }} </li>
+      		{% endfor %}
+      </ol> 
+
+        <form action="" method="post">
+    		<select name="age">
+    			<option value="kids">0 to 3 years</option>
+			    <option value="children">6 to 12 years</option>
+			    <option value="teenager">13 to 19 years</option>
+			    <option value="adult">20 to 31 years</option>
+			    <option value="elderly">32 + years</option>
+  			</select>
+
+  			<select name="gender">
+    			<option value="Female">Female</option>
+			    <option value="Male">Male</option>
+  			</select>
+
+  			<br><br>
+  			<input type="submit">
+	    </form>
+      
+   </body>
+</html>
