@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Profile page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+            .details li {
+              list-style: none;
+    }
+    li {
+        margin-bottom:10px;
+
+    }
+
+    .container{
+      padding: 40px 5px 0px 10px;
+
+    }
+
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+            <div class="container">
+                <div class="jumbotron">
+                  <div class="row">
+                      <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+                          <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png" alt="stack photo" class="img">
+                      </div>
+                      <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
+                          <div class="container" style="border-bottom:1px solid black ">
+                            <h2>{{ name }}</h2>
+                          </div>
+                            <hr>
+                          <ul class="container details">
+                            <li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>{{ email }}</p></li>
+                            <li><p><span class="fa fa-female" style="width:50px;"></span>{{ g }}</p></li>
+                            <li><p><span class="glyphicon glyphicon-map-marker one" style="width:50px;"></span>{{ dob }}</p></li>
+                            <li><p><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span><a href="/edit">Edit Profile</p></a>
+                          </ul>
+                      </div>
+                  </div>
+                </div>
+              </div>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
