@@ -5,7 +5,7 @@ from lxml import html
 
 
 def parse(product):
-
+    # url for scraping product details from snapdeal
     url = 'https://www.snapdeal.com/search?keyword={0}'.format(product)
     headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'}
     failed = False
@@ -61,47 +61,6 @@ if __name__=="__main__":
 
     scraped_data =  parse(product)
     if scraped_data:
-        print ("Writing scraped data to snapdeal-scraped-data.csv")
-        with open('snapdeal-scraped-data.csv','wb') as csvfile:
-            fieldnames = ["name","price","image","url","website"]
-            writer = csv.DictWriter(csvfile,fieldnames = fieldnames,quoting=csv.QUOTE_ALL)
-            writer.writeheader()
-            for data in scraped_data:
-                writer.writerow(data)
+        print ("---- Data is scraped ----")
     else:
         print("No data scraped")
-
-
-
-
-#https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=apple&_sacat=0&LH_TitleDesc=0&_osacat=0&_odkw=mobile+phones&LH_TitleDesc=0
-
-#https://www.ebay.com/sch/i.html?_from=R40&_nkw=apple&_sacat=0&LH_TitleDesc=0&LH_TitleDesc=0&_pgn=2
-
-# amazon
-
-#s-search-results >> span class="rush-component s-latency-cf-section"
-
-#product << div class = "some code for each product " << div class="s-result-list s-search-results sg-row"
-
-
-
-'''
-
-
-    ---- Path of main products for ebay----
-<div class = "srp-main srp-main--isLarge"
-<div id = "mainContent"
-    <div class = srp-river srp-layout-inner"
-        <div id = "srp-river-main"
-            <div id = "srp-river-results"
-                <ul class = "srp-results srp-lists clearfix">
-                    <div id ="srp-river-results-listing(123456..)">
-
-
-    ---- Path of main product for amazon ----
-
-
-
-
-'''
